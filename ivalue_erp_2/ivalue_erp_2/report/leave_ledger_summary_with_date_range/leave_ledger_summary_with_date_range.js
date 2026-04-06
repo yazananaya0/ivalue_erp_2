@@ -1,4 +1,4 @@
-frappe.query_reports["Leave Ledger Summary Test"] = {
+frappe.query_reports["Leave Ledger Summary With Date Range"] = {
     "filters": [
         {
             "fieldname": "employee",
