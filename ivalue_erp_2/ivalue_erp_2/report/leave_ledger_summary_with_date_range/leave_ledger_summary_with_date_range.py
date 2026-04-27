@@ -14,8 +14,12 @@ def get_columns():
             "label": "Employee",
             "fieldname": "employee",
             "fieldtype": "Link",
-			"options": "Employee",
-            "width": 200,
+            "options": "Employee"
+        },
+        {
+            "label": "Employee Name",
+            "fieldname": "employee_name",
+            "fieldtype": "Data"
         },
         {
             "label": "Leave Type",
@@ -92,7 +96,8 @@ def get_data(filters):
 
         if key not in result:
             result[key] = {
-                "employee": f"{lle.employee}: {lle.employee_name}",
+                "employee": lle.employee,
+                "employee_name": lle.employee_name,
                 "leave_type": lle.leave_type,
                 "leave_balance": 0,
                 "start_date": year+"-01-01",
